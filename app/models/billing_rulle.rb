@@ -1,3 +1,3 @@
 class BillingRulle < ActiveRecord::Base
-  #default_scope {where (default: true)}
+  #scope :default, -> {where (default: true)}
 end
