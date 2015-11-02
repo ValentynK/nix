@@ -1,12 +1,12 @@
 class PriseService
+  INITIAL_PRICE = 0.001.freeze
+  IMAGE_FILE_SIZE = 0.01.freeze
+  IMAGE_CONTENT_TYPE = 0.005.freeze
+
   attr_reader :record
 
-  class << self
-    def generate_prise(record)
+  def self.generate_prise(record)
       new(record).create_prise
-    end
-
-    private :new
   end
 
  def initialize(record)
@@ -14,10 +14,9 @@ class PriseService
  end
 
   def create_prise
-    @prise = 0.001
-    @prise += 0.01 if @record.image_file_size > 10_000
-    @prise += 0.005 if @record.image_content_type == "image/gif"
-    record.price = @prise
-   # a = find_files(@record.image_file_name)
+    prise = INITIAL_PRICE
+    prise += IMAGE_FILE_SIZE if record.image_file_size > 100.kilobyte()
+    prise += IMAGE_CONTENT_TYPE if record.image_content_type == "image/gif"
+    record.price = prise
   end
-  end
+end

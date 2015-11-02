@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  default: 
+  price: 
+  big_size_price: 
+  giff_price: MyString
+
+two:
+  name: 
+  default: 
+  price: 
+  big_size_price: 
+  giff_price: MyString

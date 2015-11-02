@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
     @record = Image.new(image_params)
 
     @record.save
-    respond_with (@record)
+    respond_with(@record)
   end
 
   def show

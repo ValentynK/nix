@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151101135142) do
+ActiveRecord::Schema.define(version: 20151102190629) do
+
+  create_table "billing_rulles", force: :cascade do |t|
+    t.text     "name"
+    t.boolean  "default"
+    t.float    "price"
+    t.float    "big_size_price"
+    t.string   "giff_price"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "images", force: :cascade do |t|
     t.float    "price"
