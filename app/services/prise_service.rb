@@ -3,7 +3,7 @@ class PriseService
   IMAGE_FILE_SIZE = 0.01.freeze
   IMAGE_CONTENT_TYPE = 0.005.freeze
 
-  attr_reader :record, :rule
+  attr_reader :record
 
   def self.generate_prise(record)
     new(record).create_prise
