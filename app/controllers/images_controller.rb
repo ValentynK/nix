@@ -1,5 +1,9 @@
 class ImagesController < ApplicationController
-  respond_to :html, :xml
+  respond_to :json, :xml, :html
+
+  def index
+    @record = Image.all
+  end
 
   def new
   end
@@ -7,8 +11,9 @@ class ImagesController < ApplicationController
   def create
     @record = Image.new(image_params)
 
-    @record.save
-    respond_with(@record)
+    if @record.save
+      respond_with(@record)
+    end
   end
 
   def show
