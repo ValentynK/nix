@@ -25,7 +25,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
-#gem 'rmagick'
 gem 'pry'
 gem 'haml'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
