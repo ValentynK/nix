@@ -1,11 +1,11 @@
 class ImagesController < ApplicationController
-  respond_to :json, :xml, :html
+  respond_to :json, :xml
 
   def index
     @record = Image.all
   end
 
-  def new
+  def ew
   end
 
   def create
@@ -16,7 +16,7 @@ class ImagesController < ApplicationController
     end
   end
 
-  def show
+  def how
     @record = Image.find(params[:id])
   end
 
